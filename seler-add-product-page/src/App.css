@@ -1,0 +1,317 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Use a clean font */
+  background-color: #e9ecef; /* Light background for the entire page */
+}
+
+/* Main App Container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+}
+
+.navbar-container h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 24px; /* Larger font size for the heading */
+}
+
+/* Button Styles */
+.custom-button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* Set the gap to 10px for spacing between buttons */
+}
+
+.custom-button button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #f0f0f0;
+  color: white;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  width: auto; /* Set button width to auto */
+}
+
+.save-draft {
+  background-color: #a8a5a5; /* Default background color for save draft */
+}
+
+.add-product {
+  background-color: lightskyblue; /* Default background color for add product */
+}
+
+/* Button Hover Effects */
+.custom-button .save-draft:hover {
+  background-color: #888; /* Change background on hover */
+}
+
+.custom-button .add-product:hover {
+  background-color: rgb(25, 92, 199); /* Change background on hover */
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  flex: 1; /* Takes up the remaining space after the navbar */
+  padding: 20px;
+}
+
+/* Left and Right Containers */
+.left-container,
+.right-container {
+  flex: 1; /* Each takes up equal width */
+  margin: 10px;
+}
+
+/* Section Styles */
+.general-information,
+.pricing,
+.Image-upload,
+.category {
+  padding: 15px;
+  margin: 10px 0; /* Space between sections */
+  background-color: #f0f0f0; /* Light gray background for sections */
+  border: 1px solid #ccc; /* Border for sections */
+  border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+  margin: 0; /* Remove default margin from h2 elements */
+  margin-bottom: 15px; 
+}
+
+/* Label Styles */
+label {
+  display: block; /* Ensure labels are block level */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Input, Select, and Textarea Styles */
+input[type="text"],
+textarea,
+select {
+  width: 100%; /* Make inputs and textareas full width */
+  padding: 10px; /* Padding inside inputs and textareas */
+  border: 1px solid #ccc; /* Border for inputs and textareas */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 15px; /* Space below inputs and textareas */
+}
+
+/* Flexbox for Pricing Section */
+.pricing-content {
+  display: flex;
+  gap: 10px; /* Space between pricing items */
+}
+
+/* Individual Pricing Item */
+.pricing-item {
+  flex: 1; /* Each item takes equal space */
+}
+
+/* Image Carousel Styles */
+.image-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.large-image-container {
+  position: relative;
+  width: 100%; /* Responsive width */
+  max-width: 400px; /* Optional: maximum width */
+  overflow: hidden; /* Hide overflow */
+}
+
+.large-image {
+  width: 100%; /* Set width to 100% of the container */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  max-height: 300px; /* Set a maximum height to prevent overflow */
+  object-fit: contain; /* Ensures the whole image is visible */
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.remove-image-button {
+  position: absolute; /* Position relative to the container */
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.no-image-container {
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #f0f0f0; /* Background color */
+  border: 1px dashed #ccc; /* Dashed border for effect */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.placeholder-container {
+  width: 300px; /* Set width to 300px */
+  height: 300px; /* Set height to 300px */
+  display: flex;
+  justify-content: center; /* Center button horizontally */
+  align-items: center; /* Center button vertically */
+  border: 2px dashed #ccc; /* Optional: dashed border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  margin: 0 auto; /* Center the placeholder */
+}
+
+.thumbnail {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.thumbnail-wrapper {
+  margin: 5px;
+}
+
+.add-image-button {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-image-button:hover {
+  background-color: #e0e0e0;
+}
+
+.category{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.category .category-type{
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Create space between label and input */
+}
+
+.category .radio-type-buttons .category-radio-button{
+  display: flex;
+  gap: 20px;
+}
+
+.category .category-type label {
+  width: 80px; /* Adjust the width of the label */
+  text-align: start; /* Align the label text to the right */
+}
+
+.category .category-type input {
+  flex-grow: 1; /* Allow the input to expand and take up available space */
+  max-width: 75%; /* Keep the max width if needed */
+}
+
+.category .category-type input{
+  max-width: 75%;
+}
+
+.category .radio-type-buttons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Media Query for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Space between elements */
+  }
+
+  .navbar-container h2 {
+    text-align: center;
+    width: 100%; /* Center align heading */
+  }
+
+  .custom-button {
+    width: 100%;
+    flex-direction: column;
+    align-items: center; /* Center align buttons */
+  }
+
+  .custom-button button {
+    width: 100%; /* Make buttons take up full width on smaller screens */
+  }
+
+  .content-container {
+    flex-direction: column;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .left-container,
+  .right-container {
+    margin: 5px 0;
+    padding: 10px; /* Padding for smaller screens */
+  }
+
+  .pricing-content {
+    flex-direction: column;
+  }
+  .category .category-type{
+    flex-direction: column;
+    align-items: start;
+  }
+  .category .radio-type-buttons{
+    flex-direction: column;
+    align-items: start;
+  }
+  .radio-type-buttons .category-radio-button{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+   .large-image-container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .thumbnail {
+    width: 75px;
+    height: 50px;
+  }
+
+  .add-image-button, .remove-image-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .placeholder-container {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+  }
+}
